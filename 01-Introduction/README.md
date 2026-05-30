@@ -110,36 +110,10 @@ React was created to solve these problems.
 
 ## Main Goals of React
 
-### 1. Reusability
-
-Create once and use many times.
-
-Example:
-
-```text
-Button Component
-     ↓
-Use Anywhere
-```
-
----
-
-### 2. Better Performance
-
-Reduce unnecessary DOM updates.
-
----
-
-### 3. Maintainability
-
-Keep code organized and easier to manage.
-
----
-
-### 4. Scalability
-
-Handle large applications efficiently.
-
+- Reusability: Create once and use many times.
+- Better Performance: Reduce unnecessary DOM updates.
+- Maintainability: Keep code organized and easier to manage.
+- Scalability: Handle large applications efficiently.
 ---
 
 # Why React?
@@ -203,30 +177,14 @@ This makes development easier.
 
 # History of React
 
-### 2011
-
-React was first used internally at Facebook.
-
----
-
-### 2013
-
-React was released as Open Source.
-
----
-
-### 2015
-
-React Native was introduced.
+```text
+- 2011: React was first used internally at Facebook.
+- 2013: React was released as Open Source.
+- 2015: React Native was introduced.
 
 Developers could now build mobile applications using React concepts.
-
----
-
-### Present
-
-React is one of the most widely used frontend technologies in the world.
-
+Present: React is one of the most widely used frontend technologies in the world.
+```
 ---
 
 # Problems with Traditional JavaScript
@@ -255,27 +213,10 @@ Problems become difficult to manage.
 
 ## Challenges
 
-### Repeated Code
-
-Same UI logic written multiple times.
-
----
-
-### DOM Manipulation
-
-Developers manually update elements.
-
----
-
-### Difficult State Management
-
-Managing changing data becomes hard.
-
----
-
-### Poor Scalability
-
-Application complexity increases rapidly.
+### Repeated Code: Same UI logic written multiple times.
+DOM Manipulation: Developers manually update elements.
+Difficult State Management: Managing changing data becomes hard.
+Poor Scalability: Application complexity increases rapidly.
 
 ---
 
@@ -327,36 +268,25 @@ DOM provides a programming interface that allows JavaScript to:
 Without DOM, JavaScript could not manipulate webpages.
 
 ---
-
 # Problems with Real DOM
 
-Real DOM updates are expensive.
+Real DOM updates are expensive because every change may trigger:
 
-Whenever an update occurs, the browser may perform:
+- Style Recalculation
+- Reflow
+- Repaint
+- Rendering
 
-### Recalculation
+Result:
 
-Determine layout again.
+- Slower Performance
+- More Resource Usage
 
-### Reflow
-
-Recalculate element positions.
-
-### Repaint
-
-Redraw elements.
-
-### Rendering
-
-Display updated content.
-
-These operations consume resources.
-
-For large applications, frequent updates reduce performance.
+React solves this problem using the Virtual DOM.
 
 # What is Virtual DOM?
 
-Virtual DOM is a lightweight copy of the Real DOM stored in memory.
+Virtual DOM is a lightweight copy of the Real DOM stored in memory. (JavaScript representation of the Real DOM)
 
 React does not immediately update the Real DOM whenever data changes.
 
@@ -438,7 +368,7 @@ heading.innerText = "1";
 
 Process:
 
-```text id="w74iz6"
+```text
 Button Click
      ↓
 Find Element
@@ -463,14 +393,14 @@ h1
 
 New Virtual DOM:
 
-```text id="c9jolw"
+```text
 h1
 └── Count: 1
 ```
 
 React compares:
 
-```text id="0w3n7n"
+```text
 Old Value = Count: 0
 
 New Value = Count: 1
@@ -480,7 +410,7 @@ React updates only the changed text node.
 
 Process:
 
-```text id="pwy9tp"
+```text
 Button Click
      ↓
 State Changes
@@ -514,25 +444,25 @@ User likes Product #521.
 
 React compares:
 
-```text id="4g5fo8"
-Old Product #521 ❤️ No
+```text
+Old Product #521 No
 
-New Product #521 ❤️ Yes
+New Product #521 Yes
 ```
 
 React updates:
 
-```text id="v9k4ew"
+```text
 Product #521 Only
 ```
 
 Not:
 
-```text id="q9ukoc"
-Navbar ❌
-Sidebar ❌
-Footer ❌
-Other Products ❌
+```text
+Navbar
+Sidebar
+Footer
+Other Products
 ```
 
 This optimization improves performance.
@@ -543,7 +473,7 @@ This optimization improves performance.
 
 Diffing is the process of comparing:
 
-```text id="r7w6hs"
+```text
 Old Virtual DOM
         VS
 New Virtual DOM
@@ -557,13 +487,13 @@ React identifies what changed.
 
 Without Diffing:
 
-```text id="m3ekys"
+```text
 Update Everything
 ```
 
 With Diffing:
 
-```text id="e0h0n5"
+```text
 Update Only Changed Elements
 ```
 
@@ -581,13 +511,13 @@ Old Virtual DOM:
 
 New Virtual DOM:
 
-```html id="rm8z6h"
+```html
 <h1>Hello Rahul</h1>
 ```
 
 Diffing identifies:
 
-```text id="2yrg0r"
+```text
 Text Changed
 ```
 
@@ -601,7 +531,7 @@ Reconciliation is the process React uses to update the Real DOM after Diffing.
 
 Flow:
 
-```text id="m4e7h4"
+```text
 Old Virtual DOM
         ↓
 New Virtual DOM
@@ -629,7 +559,7 @@ Improve performance.
 
 React follows a specific workflow.
 
-```text id="90qv4u"
+```text
 User Action
       ↓
 State Changes
@@ -653,7 +583,7 @@ Updated UI
 
 User clicks a Like button.
 
-```text id="c8n6dr"
+```text
 Click Like
      ↓
 State Changes
@@ -686,7 +616,7 @@ depend on it.
 
 ## Rendering Flow
 
-```text id="1obn7v"
+```text
 Initial Render
       ↓
 User Interaction
@@ -768,7 +698,7 @@ A web application that loads a single HTML page and dynamically updates content 
 
 ## Traditional Website
 
-```text id="g4s4p6"
+```text
 Home
    ↓
 Browser Reload
@@ -786,7 +716,7 @@ Every navigation reloads the page.
 
 ## React SPA
 
-```text id="s9vuh4"
+```text
 Home
    ↓
 About
@@ -832,7 +762,7 @@ Tell the computer HOW to perform tasks.
 
 JavaScript Example:
 
-```text id="xlj7zt"
+```text
 Find Element
 Update Text
 Update Style
@@ -851,7 +781,7 @@ React handles updates automatically.
 
 Example:
 
-```text id="3utl6t"
+```text
 If count is 5
 
 Display:
@@ -886,7 +816,7 @@ Large applications are divided into smaller reusable components.
 
 Example:
 
-```text id="jvzcc3"
+```text
 App
 │
 ├── Navbar
@@ -1179,21 +1109,11 @@ Faster UI Updates
 
 # Features of React
 
-## 1. Component-Based Architecture
+### 1. Component-Based Architecture: Build applications using reusable components.
 
-Build applications using reusable components.
+### 2. Virtual DOM: Optimized rendering.
 
----
-
-## 2. Virtual DOM
-
-Optimized rendering.
-
----
-
-## 3. JSX
-
-Allows writing HTML-like syntax inside JavaScript.
+### 3. JSX: Allows writing HTML-like syntax inside JavaScript.
 
 Example:
 
@@ -1201,11 +1121,7 @@ Example:
 <h1>Hello React</h1>
 ```
 
----
-
-## 4. One-Way Data Flow
-
-Data flows:
+### 4. One-Way Data Flow: Data flows:
 
 ```text
 Parent → Child
@@ -1213,27 +1129,11 @@ Parent → Child
 
 Predictable and easier to debug.
 
----
+### 5. Reusability: Write once, Reuse everywhere.
 
-## 5. Reusability
+### 6. Declarative UI: Describe UI, React updates DOM automatically.
 
-Write once.
-
-Reuse everywhere.
-
----
-
-## 6. Declarative UI
-
-Describe UI.
-
-React updates DOM automatically.
-
----
-
-## 7. Hooks
-
-Manage state and lifecycle in functional components.
+### 7. Hooks: Manage state and lifecycle in functional components.
 
 Examples:
 
@@ -1244,57 +1144,6 @@ useRef
 useMemo
 useCallback
 ```
-
----
-
-# Advantages of React
-
-### Reusable Components
-
-Reduces code duplication.
-
----
-
-### Better Performance
-
-Optimized rendering through Virtual DOM.
-
----
-
-### Easy Maintenance
-
-Code is organized into components.
-
----
-
-### Scalability
-
-Suitable for large applications.
-
----
-
-### Strong Community
-
-Large number of resources available.
-
----
-
-### Rich Ecosystem
-
-Many supporting libraries.
-
----
-
-### Industry Standard
-
-Widely used in production applications.
-
----
-
-# Limitations of React
-
-Although React is powerful, it has some limitations.
-
 ---
 
 ## 1. React Handles Only UI
@@ -1329,7 +1178,7 @@ Large applications often require multiple libraries.
 
 ## React is a Framework
 
-Wrong
+Wrong!
 
 React is a JavaScript Library.
 
@@ -1337,7 +1186,7 @@ React is a JavaScript Library.
 
 ## React Replaces JavaScript
 
-Wrong
+Wrong!
 
 React is built using JavaScript.
 
@@ -1345,7 +1194,7 @@ React is built using JavaScript.
 
 ## React Replaces the DOM
 
-Wrong
+Wrong!
 
 React still uses the Real DOM.
 
@@ -1355,7 +1204,7 @@ It only optimizes DOM updates.
 
 ## Virtual DOM is the Real DOM
 
-Wrong
+Wrong!
 
 Virtual DOM is a lightweight copy stored in memory.
 
@@ -1374,24 +1223,6 @@ Poorly written React applications can still be slow.
 ## Component
 
 Reusable UI block.
-
----
-
-## JSX
-
-HTML-like syntax inside JavaScript.
-
----
-
-## Props
-
-Data passed from Parent to Child.
-
----
-
-## State
-
-Data managed by a component.
 
 ---
 
