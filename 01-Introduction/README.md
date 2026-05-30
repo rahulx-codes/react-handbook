@@ -6,33 +6,33 @@
 
 # Table of Contents
 
-1. What is React?
-2. Why was React Created?
-3. Why React?
-4. History of React
-5. Problems with Traditional JavaScript
-6. What is DOM?
-7. Problems with Real DOM
-8. What is Virtual DOM?
-9. Real DOM vs Virtual DOM
-10. Diffing
-11. Reconciliation
-12. How React Works
-13. React Rendering Cycle
-14. SPA (Single Page Application)
-15. Declarative vs Imperative Programming
-16. React Core Philosophy
-17. Why React Became Popular
-18. React Ecosystem
-19. React vs Vanilla JavaScript
-20. Why React is Fast
-21. Features of React
-22. Advantages of React
-23. Limitations of React
-24. Common Misconceptions
-25. Important Terms
-26. Interview Questions
-27. Quick Revision
+- [What is React?](#what-is-react)
+- [Why was React Created?](#why-was-react-created)
+- [Why React?](#why-react)
+- [History of React](#history-of-react)
+- [Problems with Traditional JavaScript](#problems-with-traditional-javascript)
+- [What is DOM?](#what-is-dom)
+- [Problems with Real DOM](#problems-with-real-dom)
+- [What is Virtual DOM?](#what-is-virtual-dom)
+- [Real DOM vs Virtual DOM](#real-dom-vs-virtual-dom)
+- [Diffing](#diffing)
+- [Reconciliation](#reconciliation)
+- [How React Works](#how-react-works)
+- [React Rendering Cycle](#react-rendering-cycle)
+- [SPA (Single Page Application)](#spa-single-page-application)
+- [Declarative vs Imperative Programming](#declarative-vs-imperative-programming)
+- [React Core Philosophy](#react-core-philosophy)
+- [Why React Became Popular](#why-react-became-popular)
+- [React Ecosystem](#react-ecosystem)
+- [React vs Vanilla JavaScript](#react-vs-vanilla-javascript)
+- [Why React is Fast](#why-react-is-fast)
+- [Features of React](#features-of-react)
+- [Advantages of React](#advantages-of-react)
+- [Limitations of React](#limitations-of-react)
+- [Common Misconceptions](#common-misconceptions)
+- [Important Terms](#important-terms)
+- [Interview Questions](#interview-questions)
+- [Quick Revision](#quick-revision)
 
 ---
 
