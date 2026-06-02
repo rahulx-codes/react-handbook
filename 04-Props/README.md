@@ -1,6 +1,4 @@
-# 04 - Props
-
-## What are Props?
+# What are Props?
 
 Props stands for **Properties**.
 
@@ -8,9 +6,9 @@ Props are used to pass data from a Parent Component to a Child Component.
 
 Think of props like function arguments.
 
-✅ Parent sends data.
+[+] Parent sends data.
 
-✅ Child receives data.
+[+] Child receives data.
 
 ---
 
@@ -180,9 +178,9 @@ function Card({ name, age, skill }) {
 }
 ```
 
-✅ Cleaner
+[+] Cleaner
 
-✅ Easier to read
+[+] Easier to read
 
 ---
 
