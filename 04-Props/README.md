@@ -6,9 +6,10 @@ Props are used to pass data from a Parent Component to a Child Component.
 
 Think of props like function arguments.
 
-[+] Parent sends data.
-
-[+] Child receives data.
+> Note:
+>
+> * Parent sends data.
+> * Child receives data.
 
 ---
 
@@ -18,19 +19,19 @@ Without props, every component would display the same hardcoded data.
 
 Props allow components to become reusable.
 
-Example:
+### Example
 
 Instead of creating:
 
-- Rahul Card
-- Mohan Card
-- Aman Card
+* Rahul Card
+* Mohan Card
+* Aman Card
 
 We create one Card component and pass different data using props.
 
 ---
 
-# Parent Component
+## Parent Component
 
 ```jsx
 import Card from "./Card";
@@ -50,7 +51,7 @@ export default App;
 
 ---
 
-# Child Component
+## Child Component
 
 ```jsx
 function Card(props) {
@@ -62,7 +63,7 @@ export default Card;
 
 ---
 
-# Output
+## Output
 
 ```text
 Hello Rahul
@@ -72,9 +73,9 @@ Hello Aman
 
 ---
 
-# How Props Work
+## How Props Work
 
-## Step 1
+### Step 1
 
 Parent sends data.
 
@@ -82,7 +83,7 @@ Parent sends data.
 <Card name="Rahul" />
 ```
 
-## Step 2
+### Step 2
 
 React creates an object.
 
@@ -92,7 +93,7 @@ React creates an object.
 }
 ```
 
-## Step 3
+### Step 3
 
 Child receives that object.
 
@@ -112,7 +113,7 @@ Output:
 
 ---
 
-# Accessing Props
+## Accessing Props
 
 ```jsx
 function Card(props) {
@@ -122,15 +123,15 @@ function Card(props) {
 
 ---
 
-# Multiple Props
+## Multiple Props
 
-## Parent
+### Parent
 
 ```jsx
 <Card name="Rahul" age={22} skill="React" />
 ```
 
-## Child
+### Child
 
 ```jsx
 function Card(props) {
@@ -146,7 +147,7 @@ function Card(props) {
 
 ---
 
-# Props Using Destructuring
+## Props Using Destructuring
 
 Instead of:
 
@@ -164,7 +165,7 @@ function Card({ name }) {
 }
 ```
 
-Multiple values:
+### Multiple Values
 
 ```jsx
 function Card({ name, age, skill }) {
@@ -178,45 +179,43 @@ function Card({ name, age, skill }) {
 }
 ```
 
-[+] Cleaner
-
-[+] Easier to read
+> Important:
+>
+> * Cleaner syntax.
+> * Easier to read.
+> * Most commonly used approach.
 
 ---
 
-# Passing String Props
+## Passing Different Types of Props
+
+### String
 
 ```jsx
 <Card name="Rahul" />
 ```
 
----
-
-# Passing Number Props
+### Number
 
 ```jsx
 <Card age={22} />
 ```
 
----
-
-# Passing Boolean Props
+### Boolean
 
 ```jsx
 <Card isStudent={true} />
 ```
 
----
+### Array
 
-# Passing Array Props
-
-## Parent
+Parent:
 
 ```jsx
 <Card skills={["React", "Java", "DSA"]} />
 ```
 
-## Child
+Child:
 
 ```jsx
 function Card({ skills }) {
@@ -230,11 +229,9 @@ Output:
 React, Java, DSA
 ```
 
----
+### Object
 
-# Passing Object Props
-
-## Parent
+Parent:
 
 ```jsx
 <Card
@@ -245,7 +242,7 @@ React, Java, DSA
 />
 ```
 
-## Child
+Child:
 
 ```jsx
 function Card({ user }) {
@@ -260,11 +257,11 @@ function Card({ user }) {
 
 ---
 
-# Passing Function as Props
+## Passing Function as Props
 
 A parent can send a function to a child.
 
-## Parent
+### Parent
 
 ```jsx
 function App() {
@@ -276,7 +273,7 @@ function App() {
 }
 ```
 
-## Child
+### Child
 
 ```jsx
 function Card({ clickHandler }) {
@@ -286,11 +283,11 @@ function Card({ clickHandler }) {
 
 ---
 
-# Children Prop
+## Children Prop
 
-Anything written between opening and closing tags becomes a special prop called children.
+Anything written between opening and closing tags becomes a special prop called `children`.
 
-## Parent
+### Parent
 
 ```jsx
 <Card>
@@ -298,7 +295,7 @@ Anything written between opening and closing tags becomes a special prop called 
 </Card>
 ```
 
-## Child
+### Child
 
 ```jsx
 function Card({ children }) {
@@ -314,9 +311,13 @@ Hello Rahul
 
 ---
 
-# Props are Read Only
+## Props are Read Only
 
-[-] Wrong
+> Warning:
+>
+> Never modify props directly.
+
+Wrong:
 
 ```jsx
 function Card(props) {
@@ -324,11 +325,11 @@ function Card(props) {
 }
 ```
 
-Props should never be modified.
+Props should be treated as read-only data.
 
 ---
 
-# Props Flow
+## Props Flow
 
 ```text
 Parent Component
@@ -343,19 +344,17 @@ Child Component
 Props always flow:
 
 ```text
-Top → Bottom
 Parent → Child
+Top → Bottom
 ```
 
-This is called:
-
-**One-Way Data Flow**
+This is called **One-Way Data Flow**.
 
 ---
 
-# Real Example
+## Real Example
 
-## App.jsx
+### App.jsx
 
 ```jsx
 import Card from "./Card";
@@ -364,7 +363,6 @@ function App() {
   return (
     <>
       <Card name="Rahul" age={22} skill="React" />
-
       <Card name="Mohan" age={25} skill="Java" />
     </>
   );
@@ -373,7 +371,7 @@ function App() {
 export default App;
 ```
 
-## Card.jsx
+### Card.jsx
 
 ```jsx
 function Card({ name, age, skill }) {
@@ -391,76 +389,58 @@ export default Card;
 
 ---
 
-# Interview Questions
+## Interview Questions
 
-## What are Props?
+### What are Props?
 
 Props are used to pass data from a Parent Component to a Child Component.
 
----
-
-## What does Props stand for?
+### What does Props stand for?
 
 Properties.
 
----
-
-## Are Props mutable?
+### Are Props mutable?
 
 No.
 
 Props are read-only.
 
----
-
-## Can we pass functions as Props?
+### Can we pass functions as Props?
 
 Yes.
 
----
-
-## Can we pass arrays and objects as Props?
+### Can we pass arrays and objects as Props?
 
 Yes.
 
----
-
-## What is children Prop?
+### What is the children Prop?
 
 A special prop that contains content written between component tags.
 
----
+### What is One-Way Data Flow?
 
-## What is One-Way Data Flow?
-
-Data moves only from Parent → Child.
+Data moves only from Parent to Child.
 
 ---
 
-# Quick Revision
+## Quick Revision
 
-✅ Props = Properties
+* Props = Properties
+* Used to pass data
+* Parent sends data
+* Child receives data
+* Props are read-only
+* Can pass strings
+* Can pass numbers
+* Can pass booleans
+* Can pass arrays
+* Can pass objects
+* Can pass functions
+* Supports children prop
+* Follows One-Way Data Flow
 
-✅ Used to pass data
+---
 
-✅ Parent sends data
+## Remember
 
-✅ Child receives data
-
-✅ Props are read-only
-
-✅ Can pass strings
-
-✅ Can pass numbers
-
-✅ Can pass booleans
-
-✅ Can pass arrays
-
-✅ Can pass objects
-
-✅ Can pass functions
-
-✅ Supports children prop
-
-✅ One-Way Data Flow (Parent → Child)
+Props are used to pass data from a Parent Component to a Child Component, and Props are read-only.
