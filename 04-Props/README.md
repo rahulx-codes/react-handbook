@@ -23,8 +23,8 @@ Example:
 Instead of creating:
 
 - Rahul Card
-- Mohan Card
-- Aman Card
+- Tony Card
+- Charli Card
 
 We create one Card component and pass different data using props.
 
@@ -39,8 +39,8 @@ function App() {
   return (
     <>
       <Card name="Rahul" />
-      <Card name="Mohan" />
-      <Card name="Aman" />
+      <Card name="Tony" />
+      <Card name="Charli" />
     </>
   );
 }
@@ -66,8 +66,8 @@ export default Card;
 
 ```text
 Hello Rahul
-Hello Mohan
-Hello Aman
+Hello Tony
+Hello Charli
 ```
 
 ---
@@ -88,7 +88,7 @@ React creates an object.
 
 ```js
 {
-  name: "Rahul"
+  name: "Rahul";
 }
 ```
 
@@ -106,7 +106,7 @@ Output:
 
 ```js
 {
-  name: "Rahul"
+  name: "Rahul";
 }
 ```
 
@@ -127,11 +127,7 @@ function Card(props) {
 ## Parent
 
 ```jsx
-<Card
-  name="Rahul"
-  age={22}
-  skill="React"
-/>
+<Card name="Rahul" age={22} skill="React" />
 ```
 
 ## Child
@@ -241,10 +237,12 @@ React, Java, DSA
 ## Parent
 
 ```jsx
-<Card user={{
-  name: "Rahul",
-  age: 22
-}} />
+<Card
+  user={{
+    name: "Rahul",
+    age: 22,
+  }}
+/>
 ```
 
 ## Child
@@ -282,11 +280,7 @@ function App() {
 
 ```jsx
 function Card({ clickHandler }) {
-  return (
-    <button onClick={clickHandler}>
-      Click Me
-    </button>
-  );
+  return <button onClick={clickHandler}>Click Me</button>;
 }
 ```
 
@@ -326,7 +320,7 @@ Hello Rahul
 
 ```jsx
 function Card(props) {
-  props.name = "Aman";
+  props.name = "Tony";
 }
 ```
 
@@ -369,17 +363,9 @@ import Card from "./Card";
 function App() {
   return (
     <>
-      <Card
-        name="Rahul"
-        age={22}
-        skill="React"
-      />
+      <Card name="Rahul" age={22} skill="React" />
 
-      <Card
-        name="Mohan"
-        age={25}
-        skill="Java"
-      />
+      <Card name="Tony" age={25} skill="Java" />
     </>
   );
 }
@@ -453,19 +439,19 @@ Data moves only from Parent → Child.
 
 ## Quick Revision
 
-* Props = Properties
-* Used to pass data
-* Parent sends data
-* Child receives data
-* Props are read-only
-* Can pass strings
-* Can pass numbers
-* Can pass booleans
-* Can pass arrays
-* Can pass objects
-* Can pass functions
-* Supports children prop
-* Follows One-Way Data Flow
+- Props = Properties
+- Used to pass data
+- Parent sends data
+- Child receives data
+- Props are read-only
+- Can pass strings
+- Can pass numbers
+- Can pass booleans
+- Can pass arrays
+- Can pass objects
+- Can pass functions
+- Supports children prop
+- Follows One-Way Data Flow
 
 ---
 
