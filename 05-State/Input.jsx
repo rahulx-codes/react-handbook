@@ -1,0 +1,19 @@
+import { useState } from "react";
+
+function Input() {
+  const [input, setInput] = useState("");
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+
+      <h1>{input}</h1>
+    </div>
+  );
+}
+
+export default Input;
