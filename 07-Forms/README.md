@@ -1,5 +1,3 @@
-# 07 - Forms in React
-
 # 📌 Introduction
 
 Forms are used to collect user data in React applications.
